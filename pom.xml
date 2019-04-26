@@ -11,4 +11,20 @@
     <modules>
         <module>MyAlgorithms</module>
     </modules>
+    <!--集中定义版本号-->
+    <properties>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <!-- 依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>
