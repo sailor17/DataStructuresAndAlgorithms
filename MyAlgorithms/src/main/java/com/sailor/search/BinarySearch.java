@@ -1,4 +1,4 @@
-package com.sailor.lookup;
+package com.sailor.search;
 
 public class BinarySearch {
 
