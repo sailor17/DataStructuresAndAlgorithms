@@ -9,9 +9,8 @@ public class BinarySearch {
         if (array == null) return -2; // 数组为空
         int low = 0;
         int height = array.length - 1;
-        int mid;
         while (low <= height) {
-            mid = (height + low) / 2; // 折半
+            int mid = (height + low) / 2; // 折半
             if (array[mid] == key) return mid;
             else if (key < array[mid]) { // key 在左边
                 height = mid - 1;
