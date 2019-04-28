@@ -48,4 +48,28 @@ public class ShellSort {
             }
         }
     }
+
+    /**
+     * 希尔排序
+     *
+     * @param array 待排序数组
+     */
+    public static void shellSort2(int[] array) {
+        int lenth = array.length;
+        int h = 1;
+        while (h < lenth / 3) h = 3 * h + 1; // 控制步长
+        while (h >= 1) {
+            // 将数组变为h 有序
+            for (int i = h; i < lenth; i++) {
+                // 将第 i 个数 插入到正确的位置
+                for (int j = i; j >= h && array[j] < array[j - h]; j -= h) { // array[j] 小于已有的数 array[j-h]
+                    // 交换两数
+                    int tem = array[j - h];
+                    array[j - h] = array[j];
+                    array[j] = tem;
+                }
+            }
+            h = h / 3;
+        }
+    }
 }

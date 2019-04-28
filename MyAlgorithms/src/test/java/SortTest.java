@@ -67,10 +67,11 @@ public class SortTest {
     @Test
     public void shellSortTest() {
         System.out.println("ShellSort测试begin");
-        int[] array = GenerateArray.getArray(50, 1, 20);
+        int[] array = GenerateArray.getArray(20, 1, 20);
         MyPrint.PrintArray(array);
         long start = System.currentTimeMillis();
-        ShellSort.shellSort(array);  // 希尔排序
+//        ShellSort.shellSort(array);  // 希尔排序
+        ShellSort.shellSort2(array);
         long end = System.currentTimeMillis();
         MyPrint.PrintArray(array);
         System.out.println("用时：" + (end - start) + "毫秒");
