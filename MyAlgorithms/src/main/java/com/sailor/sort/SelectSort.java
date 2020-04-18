@@ -1,7 +1,5 @@
 package com.sailor.sort;
 
-import com.sailor.utils.MyPrint;
-
 /**
  * 选择排序
  * 选择排序是这样实现的：
@@ -23,17 +21,17 @@ public class SelectSort {
      * @param array
      */
     public static void Sort(int[] array) {
-        int lenth = array.length;
-        for (int i = 0; i < lenth; i++) {
-            int min = i;
-            for (int j = i + 1; j < lenth; j++) {
-                if (array[j] < array[min]) { // 升序排序  与最小的比较
-                    min = j; // 记录最小下标
+        int length = array.length;
+        for (int i = 0; i < length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < length; j++) {
+                if (array[j] < array[minIndex]) { // 升序排序  与最小的比较
+                    minIndex = j; // 记录最小下标
                 }
             }
             int temp = array[i];
-            array[i] = array[min];
-            array[min] = temp;
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
         }
     }
 }

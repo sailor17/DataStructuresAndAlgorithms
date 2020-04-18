@@ -27,6 +27,7 @@ public class SortTest {
         int[] array = {1, 0, 2, 8, 7, 4, 5, 1, 3, 9, 5, 1, 0, 4};
         MyPrint.PrintArray(array);
         InsertSort.Sort(array);  // 排序
+//        InsertSort.Sort2(array);
         MyPrint.PrintArray(array);
         System.out.println("InsertSort测试end");
     }

@@ -42,7 +42,8 @@ public class ShellSort {
      * @param array 待排序数组
      */
     public static void shellSort(int[] array) {
-        for (int step = array.length / 2; step >= 1; step /= 2) { // 外层循环控制希尔步长
+        int length = array.length;
+        for (int step = length / 2; step >= 1; step /= 2) { // 外层循环控制希尔步长
             for (int start = 0; start < step; start++) { // 控制希尔分组下标
                 insertSort(array, start, step);
             }
